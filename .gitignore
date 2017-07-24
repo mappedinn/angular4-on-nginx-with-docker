@@ -1,0 +1,24 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/nginx/logs/
+/nginx/frontend/dist
+/tmp
+/out-tsc
+
+# dependencies
+/nginx/frontend/node_modules
+
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/nginx/frontend/e2e/*.js
+/nginx/frontend/e2e/*.map
