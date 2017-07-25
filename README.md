@@ -51,13 +51,25 @@ npm ls --depth=0
 
 The angular application is working correctly through `npm start`
 
-## 2. Building the image and running the container
+## 2. Compiling the angular4 application
+
+```sh
+ng build --prod
+```
+
+Probably, the compilation will not go as it should be. In this case, disable the AOT as follows:
+
+```sh
+ng build --prod --aot=false
+```
+
+## 3. Building the image and running the container
 
 ```sh
 docker-compose up -d --build
 ```
 
-## 3. Identification of the IP address of the container
+## 4. Identification of the IP address of the container
 
 ```sh
 docker inspect angular4onnginxwithdocker_nginx_1 | grep IPA
@@ -68,9 +80,3 @@ docker inspect angular4onnginxwithdocker_nginx_1 | grep IPA
 ```
 
 Open your browser on [172.18.0.2](http://172.18.0.2/)
-
-
-## 4. Actual issue
-The landing page is stoping at `Loading...`.
-
-No error message is found in the console.
